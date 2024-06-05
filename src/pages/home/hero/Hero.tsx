@@ -2,7 +2,13 @@
 import { IKImage } from "imagekitio-react";
 import { Mouse } from "lucide-react";
 
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components";
 import { heroCarousel } from "@/data";
 
 export const Hero = () => {
@@ -20,10 +26,13 @@ export const Hero = () => {
         >
             <CarouselContent className="ml-0 mt-0 flex-1 h-full">
                 {heroCarousel.map((item) => (
-                    <CarouselItem key={item.path} className="pl-0 pt-0 relative text-white">
+                    <CarouselItem
+                        key={item.path}
+                        className="pl-0 pt-0 relative text-white"
+                    >
                         <IKImage
                             alt={item.alt}
-                            className="lg:aspect-video object-cover object-center h-full "
+                            className="aspect-video object-cover object-center h-full "
                             loading="lazy"
                             lqip={{ active: true, blur: 10, quality: 20 }}
                             path={item.path}
@@ -33,7 +42,7 @@ export const Hero = () => {
                         <div className="absolute inset-0 inset-y-[40%] w-full container">
                             <figure>
                                 <figcaption>
-                                    <h1 className="capitalize">{item.title}</h1>
+                                    <h1 className="">{item.title}</h1>
                                 </figcaption>
                                 <blockquote>{item.paragraph}</blockquote>
                             </figure>

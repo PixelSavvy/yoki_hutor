@@ -1,5 +1,5 @@
 import { amenitiesData } from "@/data";
-import { About, Amenities, Hero } from "@/pages/home";
+import { About, Amenities, ExtraAmenities, Hero } from "@/pages/home";
 
 export const HomePage = () => {
     return (
@@ -7,6 +7,7 @@ export const HomePage = () => {
             <Hero />
             <About />
             <Amenities amenities={amenitiesData} />
+            <ExtraAmenities />
         </>
     );
 };

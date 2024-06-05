@@ -4,7 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 0.1.3 (2024-06-05)
 
-
 ### Features
 
-* **initial commit:** initialiase a landing page; add sections ca3f1db
+-   **initial commit:** initialiase a landing page; add sections ca3f1db

@@ -1,3 +1,12 @@
+import {
+    BedDouble,
+    CarFront,
+    ChefHat,
+    Heart,
+    ShowerHead,
+    Sun,
+} from "lucide-react";
+
 export const heroCarousel = [
     {
         path: "Yoki_Hutor/2024-06-02%2020-41-08_S17tAktvX.jpeg",
@@ -49,5 +58,44 @@ export const amenitiesData = [
     {
         title: "Терраса",
         items: ["Мебель и мангальная зона (решётки, шампуры)"],
+    },
+];
+
+export const extraAmenitiesData = [
+    {
+        path: "Yoki_Hutor/2024-05-15%2011-46-47%20(5)_mwQmtIni6.jpeg?",
+        alt: "Yoki Hutor",
+        title: "Различные виды освещения",
+        icon: Sun,
+    },
+    {
+        path: "Yoki_Hutor/2024-05-10%2019-40-22%20(1)_8Hg2T6sgX.jpeg?",
+        alt: "Yoki Hutor",
+        title: "Качественное бельё",
+        icon: BedDouble,
+    },
+    {
+        path: "Yoki_Hutor/2024-05-10%2012-41-17%20(36)_prsir9rma.jpeg?",
+        alt: "Yoki Hutor",
+        title: "Банные аксессуары",
+        icon: ShowerHead,
+    },
+    {
+        path: "Yoki_Hutor/2024-05-15%2011-46-47_SBQzIm0cF.jpeg?",
+        alt: "Yoki Hutor",
+        title: "Гостевые принадлежности",
+        icon: Heart,
+    },
+    {
+        path: "Yoki_Hutor/2024-05-20%2020-02-16%20(2)_Pdb6JWkRi.jpeg?",
+        alt: "Yoki Hutor",
+        title: "Парковочное место",
+        icon: CarFront,
+    },
+    {
+        path: "Yoki_Hutor/2024-05-10%2012-41-17%20(21)_8rydslyaW.jpeg?",
+        alt: "Yoki Hutor",
+        title: "Вся необходимая посуда",
+        icon: ChefHat,
     },
 ];
