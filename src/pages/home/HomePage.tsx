@@ -19,7 +19,7 @@ export const HomePage = () => {
             <Amenities amenities={amenitiesData} />
             <ExtraAmenities />
             <Attractions />
-            <Section className="lg:hidden w-1/2">
+            <Section className="lg:hidden md:w-1/2">
                 <YandexTestimonials />
             </Section>
             <YandexMap />
