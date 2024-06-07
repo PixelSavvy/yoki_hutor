@@ -1,5 +1,15 @@
+import { Section } from "@/components";
 import { amenitiesData } from "@/data";
-import { About, Amenities, ExtraAmenities, Hero } from "@/pages/home";
+import {
+    About,
+    Amenities,
+    Attractions,
+    ExtraAmenities,
+    Hero,
+} from "@/pages/home";
+
+import { YandexMap } from "./yandex/YandexMap";
+import { YandexTestimonials } from "./yandex/YandexTestimonials";
 
 export const HomePage = () => {
     return (
@@ -8,6 +18,11 @@ export const HomePage = () => {
             <About />
             <Amenities amenities={amenitiesData} />
             <ExtraAmenities />
+            <Attractions />
+            <Section className="lg:hidden w-1/2">
+                <YandexTestimonials />
+            </Section>
+            <YandexMap />
         </>
     );
 };

@@ -15,48 +15,51 @@ export const Hero = () => {
     return (
         <Carousel
             autoPlay
-            className="min-h-dvh relative flex flex-col place-items-center"
+            className="relative flex flex-col flex-1 place-items-center w-full"
             opts={{
                 loop: true,
-                duration: 60,
+                duration: 30,
             }}
             pluginOpts={{
                 delay: 60000,
             }}
         >
-            <CarouselContent className="ml-0 mt-0 flex-1 h-full">
+            <CarouselContent className="ml-0 mt-0 h-full w-full">
                 {heroCarousel.map((item) => (
                     <CarouselItem
                         key={item.path}
-                        className="pl-0 pt-0 relative text-white"
+                        className="pl-0 pt-0 relative text-background w-full"
                     >
                         <IKImage
                             alt={item.alt}
-                            className="aspect-video object-cover object-center h-full "
-                            loading="lazy"
+                            className="aspect-video object-cover object-center min-h-screen "
                             lqip={{ active: true, blur: 10, quality: 20 }}
                             path={item.path}
                             transformation={[{ height: "auto", width: "auto" }]}
                         />
+
                         <div className="absolute inset-0 w-full h-full bg-black opacity-60" />
-                        <div className="absolute inset-0 inset-y-[40%] w-full container">
+                        <div className="absolute inset-y-[40%] w-full container max-w-lg md:inset-y-[30%] lg:max-w-3xl xl:max-w-4xl">
                             <figure>
                                 <figcaption>
                                     <h1 className="">{item.title}</h1>
                                 </figcaption>
-                                <blockquote>{item.paragraph}</blockquote>
+                                <blockquote className="lg:max-w-xl xl:max-w-2xl">
+                                    {item.paragraph}
+                                </blockquote>
                             </figure>
                         </div>
                     </CarouselItem>
                 ))}
             </CarouselContent>
-            <div className="absolute bottom-10 cursor-pointer group text-white">
-                <Mouse className="hidden lg:block" size={40} />
+            <div className="hidden lg:flex absolute bottom-12 cursor-pointer group text-white  flex-col justify-between items-center gap-2">
+                <Mouse className="animate-bounce" size={40} />
+                <span>начать</span>
             </div>
 
-            <div className="absolute bottom-[5rem] left-20">
-                <CarouselNext className="-translate-x-7" />
-                <CarouselPrevious className="" />
+            <div className="absolute bottom-[5rem] left-20 md:bottom-[30%]">
+                <CarouselNext className="-translate-x-7 md:w-12 md:h-12 md:-translate-x-0" />
+                <CarouselPrevious className=" md:w-12 md:h-12" />
             </div>
         </Carousel>
     );

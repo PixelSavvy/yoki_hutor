@@ -99,3 +99,59 @@ export const extraAmenitiesData = [
         icon: ChefHat,
     },
 ];
+
+export const attractionsData = [
+    {
+        title: "Музей «Гора Филина» в г. Лахденпохья",
+        description:
+            "Узнайте больше о местной истории и культуре в этом увлекательном музее",
+        to: "https://gorafilina.ru/",
+    },
+    {
+        title: "Эко-парк «Долина Водопадов»",
+        description:
+            "Насладитесь красотой природы, прогуливаясь по живописным тропам и любуясь водопадами",
+        to: "https://dolinavodopadov.ru/",
+    },
+    {
+        title: "Рускеала и рускеальские водопады",
+        description:
+            "Всего в 50 км от нас вы найдёте этот природный шедевр, который поразит вас своими величественными видами",
+        to: "https://ruskeala.ru/",
+    },
+];
+
+export const images = [
+    {
+        original: "Yoki_Hutor/2024-05-20%2020-02-16_4Jmne73NP.jpeg?",
+        thumbnail: "Yoki_Hutor/2024-05-20%2020-02-16_4Jmne73NP.jpeg?",
+    },
+    {
+        original: "Yoki_Hutor/2024-05-10%2012-41-17%20(53)_K6AKFKZ63.jpeg?",
+        thumbnail: "Yoki_Hutor/2024-05-10%2012-41-17%20(53)_K6AKFKZ63.jpeg?",
+    },
+    {
+        original: "Yoki_Hutor/2024-05-10%2012-41-17%20(24)_RE4-0RTRm.jpeg?",
+        thumbnail: "Yoki_Hutor/2024-05-10%2012-41-17%20(24)_RE4-0RTRm.jpeg?",
+    },
+    {
+        original: "Yoki_Hutor/2024-05-10%2012-41-17%20(10)_TspkIPLXc.jpeg?",
+        thumbnail: "Yoki_Hutor/2024-05-10%2012-41-17%20(10)_TspkIPLXc.jpeg?",
+    },
+    {
+        original: "Yoki_Hutor/2024-05-15%2011-46-47%20(1)_I7BOaTNNk.jpeg?",
+        thumbnail: "Yoki_Hutor/2024-05-15%2011-46-47%20(1)_I7BOaTNNk.jpeg?",
+    },
+    {
+        original: "Yoki_Hutor/2024-05-20%2020-02-16%20(3)_GvzKbR3sR.jpeg?",
+        thumbnail: "Yoki_Hutor/2024-05-20%2020-02-16%20(3)_GvzKbR3sR.jpeg?",
+    },
+    {
+        original: "Yoki_Hutor/2024-05-10%2019-40-22%20(1)_8Hg2T6sgX.jpeg?",
+        thumbnail: "Yoki_Hutor/2024-05-10%2019-40-22%20(1)_8Hg2T6sgX.jpeg?",
+    },
+    {
+        original: "Yoki_Hutor/2024-05-20%2020-02-16%20(4)_R0chzFZe1.jpeg?",
+        thumbnail: "Yoki_Hutor/2024-05-20%2020-02-16%20(4)_R0chzFZe1.jpeg?",
+    },
+];

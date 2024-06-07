@@ -2,7 +2,9 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable @typescript-eslint/naming-convention */
 import Autoplay, { type AutoplayOptionsType } from "embla-carousel-autoplay";
-import useEmblaCarousel, { type UseEmblaCarouselType } from "embla-carousel-react";
+import useEmblaCarousel, {
+    type UseEmblaCarouselType,
+} from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import * as React from "react";
 
@@ -44,9 +46,21 @@ function useCarousel() {
     return context;
 }
 
-const Carousel = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & CarouselProps>(
+const Carousel = React.forwardRef<
+    HTMLDivElement,
+    React.HTMLAttributes<HTMLDivElement> & CarouselProps
+>(
     (
-        { orientation = "horizontal", opts, setApi, className, pluginOpts, autoPlay = false, children, ...props },
+        {
+            orientation = "horizontal",
+            opts,
+            setApi,
+            className,
+            pluginOpts,
+            autoPlay = false,
+            children,
+            ...props
+        },
         ref,
     ) => {
         const plugins = [];
@@ -123,7 +137,9 @@ const Carousel = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivEl
                     carouselRef,
                     api,
                     opts,
-                    orientation: orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
+                    orientation:
+                        orientation ||
+                        (opts?.axis === "y" ? "vertical" : "horizontal"),
                     scrollPrev,
                     scrollNext,
                     canScrollPrev,
@@ -147,98 +163,113 @@ const Carousel = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivEl
 
 Carousel.displayName = "Carousel";
 
-const CarouselContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
-    ({ className, ...props }, ref) => {
-        const { carouselRef, orientation } = useCarousel();
+const CarouselContent = React.forwardRef<
+    HTMLDivElement,
+    React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => {
+    const { carouselRef, orientation } = useCarousel();
 
-        return (
-            <div ref={carouselRef} className="overflow-hidden h-full">
-                <div
-                    ref={ref}
-                    className={cn("flex", orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col", className)}
-                    {...props}
-                />
-            </div>
-        );
-    },
-);
-CarouselContent.displayName = "CarouselContent";
-
-const CarouselItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
-    ({ className, ...props }, ref) => {
-        const { orientation } = useCarousel();
-
-        return (
+    return (
+        <div ref={carouselRef} className="overflow-hidden w-full h-full">
             <div
                 ref={ref}
-                aria-roledescription="slide"
-                role="group"
                 className={cn(
-                    "min-w-0 shrink-0 grow-0 basis-full",
-                    orientation === "horizontal" ? "pl-4" : "pt-4",
+                    "flex",
+                    orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
                     className,
                 )}
                 {...props}
             />
-        );
-    },
-);
+        </div>
+    );
+});
+CarouselContent.displayName = "CarouselContent";
+
+const CarouselItem = React.forwardRef<
+    HTMLDivElement,
+    React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => {
+    const { orientation } = useCarousel();
+
+    return (
+        <div
+            ref={ref}
+            aria-roledescription="slide"
+            role="group"
+            className={cn(
+                "min-w-0 shrink-0 grow-0 basis-full",
+                orientation === "horizontal" ? "pl-4" : "pt-4",
+                className,
+            )}
+            {...props}
+        />
+    );
+});
 CarouselItem.displayName = "CarouselItem";
 
-const CarouselPrevious = React.forwardRef<HTMLButtonElement, React.ComponentProps<typeof Button>>(
-    ({ className, variant = "outline", size = "icon", ...props }, ref) => {
-        const { orientation, scrollPrev, canScrollPrev } = useCarousel();
+const CarouselPrevious = React.forwardRef<
+    HTMLButtonElement,
+    React.ComponentProps<typeof Button>
+>(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+    const { orientation, scrollPrev, canScrollPrev } = useCarousel();
 
-        return (
-            <Button
-                ref={ref}
-                disabled={!canScrollPrev}
-                size={size}
-                variant={variant}
-                className={cn(
-                    "absolute  h-8 w-8 rounded-full",
-                    orientation === "horizontal"
-                        ? "-left-12 top-1/2 -translate-y-1/2"
-                        : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
-                    className,
-                )}
-                onClick={scrollPrev}
-                {...props}
-            >
-                <ArrowLeft className="h-4 w-4" />
-                <span className="sr-only">Previous slide</span>
-            </Button>
-        );
-    },
-);
+    return (
+        <Button
+            ref={ref}
+            disabled={!canScrollPrev}
+            size={size}
+            variant={variant}
+            className={cn(
+                "absolute  h-8 w-8 rounded-full",
+                orientation === "horizontal"
+                    ? "-left-12 top-1/2 -translate-y-1/2"
+                    : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
+                className,
+            )}
+            onClick={scrollPrev}
+            {...props}
+        >
+            <ArrowLeft className="h-4 w-4" />
+            <span className="sr-only">Previous slide</span>
+        </Button>
+    );
+});
 CarouselPrevious.displayName = "CarouselPrevious";
 
-const CarouselNext = React.forwardRef<HTMLButtonElement, React.ComponentProps<typeof Button>>(
-    ({ className, variant = "outline", size = "icon", ...props }, ref) => {
-        const { orientation, scrollNext, canScrollNext } = useCarousel();
+const CarouselNext = React.forwardRef<
+    HTMLButtonElement,
+    React.ComponentProps<typeof Button>
+>(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+    const { orientation, scrollNext, canScrollNext } = useCarousel();
 
-        return (
-            <Button
-                ref={ref}
-                disabled={!canScrollNext}
-                size={size}
-                variant={variant}
-                className={cn(
-                    "absolute h-8 w-8 rounded-full",
-                    orientation === "horizontal"
-                        ? "-right-12 top-1/2 -translate-y-1/2"
-                        : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
-                    className,
-                )}
-                onClick={scrollNext}
-                {...props}
-            >
-                <ArrowRight className="h-4 w-4" />
-                <span className="sr-only">Next slide</span>
-            </Button>
-        );
-    },
-);
+    return (
+        <Button
+            ref={ref}
+            disabled={!canScrollNext}
+            size={size}
+            variant={variant}
+            className={cn(
+                "absolute h-8 w-8 rounded-full",
+                orientation === "horizontal"
+                    ? "-right-12 top-1/2 -translate-y-1/2"
+                    : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+                className,
+            )}
+            onClick={scrollNext}
+            {...props}
+        >
+            <ArrowRight className="h-4 w-4" />
+            <span className="sr-only">Next slide</span>
+        </Button>
+    );
+});
 CarouselNext.displayName = "CarouselNext";
 
-export { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi };
+export {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+    type CarouselApi,
+};
