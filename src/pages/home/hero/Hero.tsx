@@ -62,7 +62,7 @@ export const Hero = () => {
                 </Link>
             </div>
 
-            <div className="absolute bottom-[5rem] left-20 md:bottom-[30%]">
+            <div className="absolute bottom-[5rem] left-24 md:bottom-[30%]">
                 <CarouselNext className="-translate-x-7 md:w-12 md:h-12 md:-translate-x-0" />
                 <CarouselPrevious className=" md:w-12 md:h-12" />
             </div>

@@ -15,7 +15,7 @@ export const Footer = () => {
         : "https://vk.com/yokihutor";
 
     return (
-        <div className="bg-primary w-full p-8 lg:px-16 pb-4 space-y-6">
+        <div className="bg-primary w-full p-8 lg:px-12 pb-4 space-y-6">
             <nav className="flex justify-between items-center">
                 {/* Logo */}
                 <div className="w-16 h-16 flex flex-col">

@@ -4,9 +4,10 @@ import {
     useMotionValueEvent,
     useScroll,
 } from "framer-motion";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Outlet } from "react-router-dom";
 
+import { NavigationContext } from "@/context";
 import { cn } from "@/lib";
 
 import { Footer } from "./Footer";
@@ -17,6 +18,8 @@ export const Root = () => {
 
     const [isVisible, setIsVisible] = useState<boolean>(false);
     const [isTransparent, setIsTransparent] = useState<boolean>(true);
+
+    const { isOpen } = useContext(NavigationContext);
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         const previous = scrollY.getPrevious() ?? 0;
@@ -51,11 +54,11 @@ export const Root = () => {
     return (
         <>
             <m.header
-                animate={isVisible ? "hidden" : "visible"}
+                animate={isVisible && !isOpen ? "hidden" : "visible"}
                 initial="visible"
                 variants={headerVariants}
                 className={cn(
-                    "w-full px-8 lg:px-16 fixed z-10 text-background py-2 ease-smooth bg-trasparent",
+                    "w-full px-8 lg:px-12 fixed z-10 text-background py-4 lg:py-2 ease-smooth bg-trasparent",
                     isTransparent
                         ? "bg-transparent"
                         : "bg-primary shadow-md text-background",
@@ -63,6 +66,7 @@ export const Root = () => {
             >
                 <Header />
             </m.header>
+
             <AnimatePresence>
                 <m.main
                     animate="animate"
