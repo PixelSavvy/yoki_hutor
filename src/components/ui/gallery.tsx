@@ -65,7 +65,7 @@ const FullscreenModal: React.FC<FullscreenModalProps> = ({
                     </Button>
                     <IKImage
                         alt="Fullscreen"
-                        className="max-w-full max-h-full aspect-square object-cover object-center md:p-16  p-4"
+                        className="max-w-full max-h-full aspect-square object-cover object-center md:p-16 p-4"
                         lqip={{ active: true, blur: 10, quality: 20 }}
                         path={image}
                         role="presentation"

@@ -55,7 +55,7 @@ export const Root = () => {
                 initial="visible"
                 variants={headerVariants}
                 className={cn(
-                    "w-full px-8 lg:px-16 fixed z-10 text-background py-4 ease-smooth bg-trasparent",
+                    "w-full px-8 lg:px-16 fixed z-10 text-background py-2 ease-smooth bg-trasparent",
                     isTransparent
                         ? "bg-transparent"
                         : "bg-primary shadow-md text-background",

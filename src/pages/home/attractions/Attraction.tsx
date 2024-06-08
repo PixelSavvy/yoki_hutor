@@ -16,7 +16,7 @@ export const Attraction = ({ data }: { data: (typeof attractionsData)[0] }) => {
     return (
         <m.li
             className={cn(
-                "transition-all ease-smooth duration-300 border-2 border-neutral-200 rounded-xl flex flex-col",
+                "transition-all ease-smooth duration-300 border border-neutral-200 rounded-xl flex flex-col",
             )}
         >
             <Card className="border-none rounded-xl shadow-none flex-1 flex flex-col justify-between pb-6">

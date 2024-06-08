@@ -1,14 +1,17 @@
+import { Release } from "@/animations";
 import { GalleryCarousel, Section } from "@/components";
 import { images } from "@/data";
 
 import { ImportantAlert } from "../alert/Important";
-import { YandexTestimonials } from "../yandex/YandexTestimonials";
 
 export const About = () => {
     return (
-        <Section className="md:flex md:gap-12 lg:gap-16 xl:gap-20 md:space-y-0">
+        <Section
+            className="md:flex md:gap-12 lg:gap-16 xl:gap-20 md:space-y-0"
+            id="about"
+        >
             <div className="space-y-16 mb-10 flex-1">
-                <div className="">
+                <Release className="">
                     <h2>О нас</h2>
                     <p className="max-w-lg">
                         Йокихутор – это гостевой дом в Карелии, созданный для
@@ -18,13 +21,9 @@ export const About = () => {
                         идеально подходит для семейного отдыха, где вы сможете
                         расслабиться и насладиться каждым моментом.
                     </p>
-                </div>
+                </Release>
                 <div className="">
                     <ImportantAlert />
-                </div>
-
-                <div className=" hidden lg:block space-y-6 md:space-y-8 lg:space-y-10">
-                    <YandexTestimonials />
                 </div>
             </div>
             {/* image */}

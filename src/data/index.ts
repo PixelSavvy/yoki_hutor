@@ -155,3 +155,11 @@ export const images = [
         thumbnail: "Yoki_Hutor/2024-05-20%2020-02-16%20(4)_R0chzFZe1.jpeg?",
     },
 ];
+
+export const navigationLinks = [
+    { to: "hero", label: "главная" },
+    { to: "about", label: "о нас" },
+    { to: "amenities", label: "удобства" },
+    { to: "testimonials", label: "отзывы" },
+    { to: "contact", label: "контакт" },
+];

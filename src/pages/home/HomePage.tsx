@@ -1,4 +1,3 @@
-import { Section } from "@/components";
 import { amenitiesData } from "@/data";
 import {
     About,
@@ -19,9 +18,9 @@ export const HomePage = () => {
             <Amenities amenities={amenitiesData} />
             <ExtraAmenities />
             <Attractions />
-            <Section className="lg:hidden md:w-1/2">
-                <YandexTestimonials />
-            </Section>
+
+            <YandexTestimonials />
+
             <YandexMap />
         </>
     );

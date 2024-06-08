@@ -1,5 +1,8 @@
 import { type CSSProperties } from "react";
 
+import { Release } from "@/animations";
+import { Section } from "@/components";
+
 const containerStyle: CSSProperties = {
     overflow: "hidden",
     position: "relative",
@@ -35,10 +38,10 @@ const linkStyle: CSSProperties = {
 
 export const YandexTestimonials = () => {
     return (
-        <>
-            <div className="w-full">
+        <Section className="md:w-1/2" id="testimonials">
+            <Release className="w-full">
                 <h2>Что говорят наши гости</h2>
-            </div>
+            </Release>
             <div style={containerStyle}>
                 <iframe
                     src="https://yandex.ru/maps-reviews-widget/119303830373?comments"
@@ -54,6 +57,6 @@ export const YandexTestimonials = () => {
                     Йокихутор на карте Республики Карелия — Яндекс Карты
                 </a>
             </div>
-        </>
+        </Section>
     );
 };

@@ -1,6 +1,7 @@
 import { Car, TrainFront } from "lucide-react";
 import { type CSSProperties } from "react";
 
+import { Release } from "@/animations";
 import { Section } from "@/components";
 
 const containerStyle: CSSProperties = {
@@ -25,41 +26,41 @@ const smallLinkStyle: CSSProperties = {
 
 export const YandexMap = () => {
     return (
-        <Section className="pb-12 md:pb-16 lg:pb-20">
-            <div>
+        <Section className="pb-12 md:pb-16 lg:pb-20" id="contact">
+            <Release>
                 <h2>Как до нас добраться</h2>
                 <p>Добраться до нас можно несколькими способами:</p>
-                <div>
-                    <ul className="ml-0 space-y-6 grid grid-cols-1 md:grid-cols-2 md:gap-6 lg:gap-8 xl:gap-10 items-center justify-between">
-                        <li className="max-w-md">
-                            <div className="mb-4 text-secondary">
-                                <Car size={40} />
-                                <h4>На автомобиле</h4>
-                            </div>
-                            <span className="">
-                                по трассе &#171;Санкт-Петербург –
-                                Сортавала&#187;, 210 км. Координаты для
-                                навигатора:
-                                <span className="text-primary ml-1">
-                                    61.488439, 29.996988
-                                </span>
+            </Release>
+            <div>
+                <ul className="ml-0 space-y-6 grid grid-cols-1 md:grid-cols-2 md:gap-6 lg:gap-8 xl:gap-10 items-center justify-between">
+                    <li className="max-w-md">
+                        <div className="mb-4 text-secondary">
+                            <Car size={40} />
+                            <h4>На автомобиле</h4>
+                        </div>
+                        <span className="">
+                            по трассе &#171;Санкт-Петербург – Сортавала&#187;,
+                            210 км. Координаты для навигатора:
+                            <span className="text-primary ml-1">
+                                61.488439, 29.996988
                             </span>
-                        </li>
-                        <li className="max-w-xl">
-                            <div className="mb-4 text-secondary">
-                                <TrainFront size={40} />
-                                <h4>Поездом</h4>
-                            </div>
-                            <span className="">
-                                скоростной поезд &#171;Ласточка&#187; до станции
-                                &#171;Яккима&#187;, далее на такси; поезд
-                                &#171;Санкт-Петербург – Костомукша&#187; с
-                                остановкой в поселке Ихала
-                            </span>
-                        </li>
-                    </ul>
-                </div>
+                        </span>
+                    </li>
+                    <li className="max-w-xl">
+                        <div className="mb-4 text-secondary">
+                            <TrainFront size={40} />
+                            <h4>Поездом</h4>
+                        </div>
+                        <span className="">
+                            скоростной поезд &#171;Ласточка&#187; до станции
+                            &#171;Яккима&#187;, далее на такси; поезд
+                            &#171;Санкт-Петербург – Костомукша&#187; с
+                            остановкой в поселке Ихала
+                        </span>
+                    </li>
+                </ul>
             </div>
+
             <div
                 className="h-[300px] md:h-[400px] lg:h-[600px]"
                 style={containerStyle}

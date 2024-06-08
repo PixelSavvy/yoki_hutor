@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import { IKImage } from "imagekitio-react";
 import { Mouse } from "lucide-react";
+import { Link } from "react-scroll";
 
+import { Release } from "@/animations";
 import {
     Carousel,
     CarouselContent,
@@ -16,6 +18,7 @@ export const Hero = () => {
         <Carousel
             autoPlay
             className="relative flex flex-col flex-1 place-items-center w-full"
+            id="hero"
             opts={{
                 loop: true,
                 duration: 30,
@@ -39,7 +42,7 @@ export const Hero = () => {
                         />
 
                         <div className="absolute inset-0 w-full h-full bg-black opacity-60" />
-                        <div className="absolute inset-y-[40%] w-full container max-w-lg md:inset-y-[30%] lg:max-w-3xl xl:max-w-4xl">
+                        <Release className="absolute inset-y-[40%] w-full container max-w-lg md:inset-y-[30%] lg:max-w-3xl xl:max-w-4xl">
                             <figure>
                                 <figcaption>
                                     <h1 className="">{item.title}</h1>
@@ -48,13 +51,15 @@ export const Hero = () => {
                                     {item.paragraph}
                                 </blockquote>
                             </figure>
-                        </div>
+                        </Release>
                     </CarouselItem>
                 ))}
             </CarouselContent>
             <div className="hidden lg:flex absolute bottom-12 cursor-pointer group text-white  flex-col justify-between items-center gap-2">
-                <Mouse className="animate-bounce" size={40} />
-                <span>начать</span>
+                <Link smooth spy duration={500} to="about">
+                    <Mouse className="animate-bounce" size={40} />
+                    <span>начать</span>
+                </Link>
             </div>
 
             <div className="absolute bottom-[5rem] left-20 md:bottom-[30%]">

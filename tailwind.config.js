@@ -17,6 +17,9 @@ module.exports = {
             },
         },
         extend: {
+            fontFamily: {
+                golos: ['"Golos Text"', "sans-serif"],
+            },
             screens: {
                 "h-sm": { raw: "(min-height: 399px)" },
             },
