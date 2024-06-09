@@ -1,4 +1,4 @@
-import { CircleCheck } from "lucide-react";
+import { CircleCheck, Wifi } from "lucide-react";
 
 import { type amenitiesData } from "@/data";
 
@@ -13,7 +13,7 @@ export const AmenityList = ({
             {amenity.items.map((item) => (
                 <li key={item} className="flex gap-2 place-items-start">
                     <span className="text-secondary">
-                        <CircleCheck />
+                        {item === "Wi-Fi" ? <Wifi /> : <CircleCheck />}
                     </span>
                     <span>{item}</span>
                 </li>

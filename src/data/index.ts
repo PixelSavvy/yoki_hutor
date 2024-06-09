@@ -9,29 +9,26 @@ import {
 
 export const heroCarousel = [
     {
-        path: "Yoki_Hutor/2024-06-02%2020-41-08_S17tAktvX.jpeg",
-        alt: "Yoki Hutor",
-        title: "Уют в сердце природы",
+        path: "YokiHutor/website/lake.jpeg",
+        alt: "Йоки Хутор",
+        title: "идеальный тихий отдых в карелии",
         paragraph:
-            "Отдохните в окружении живописных пейзажей Карелии. Наш гостевой дом предлагает уют и комфорт, чтобы вы могли насладиться природой в полной мере, забыв о городской суете",
+            "Отдохните в окружении живописных пейзажей Карелии. Мы предлгаем уют и комфорт в дали от городской суеты",
     },
     {
-        path: "Yoki_Hutor/2024-05-10%2019-40-22%20(1)_8Hg2T6sgX.jpeg",
-        alt: "Yoki Hutor",
-        title: "Идеальное семейное убежище",
+        path: "YokiHutor/website/back_yard.jpeg",
+        alt: "Йоки Хутор",
+        title: "идеальный отдых для всей семьи",
         paragraph:
-            "Йокихутор – это идеальное место для семейного отдыха. Здесь каждый найдёт занятие по душе, а продуманные удобства создадут атмосферу уюта и гармонии для всей семьи",
-    },
-    {
-        path: "Yoki_Hutor/2024-05-10%2012-41-17%20(36)_prsir9rma.jpeg",
-        alt: "Yoki Hutor",
-        title: "Роскошный комфорт природы",
-        paragraph:
-            "Окунитесь в мир роскоши и комфорта среди природы. В Йокихутор вы найдёте все необходимые удобства для полноценного отдыха, включая сауну и террасу",
+            "Нас окружают звуки природы. Нет громких вечеринок и шума машин. Только лес, река и водоем с песчаным пляжем",
     },
 ];
 
 export const amenitiesData = [
+    {
+        title: "Дом",
+        items: ["собственный водоем с пляжем", "Wi-Fi"],
+    },
     {
         title: "Спальня",
         items: [
@@ -49,7 +46,12 @@ export const amenitiesData = [
     },
     {
         title: "Ванная",
-        items: ["Фен, тёплые полы, стиральная машина"],
+        items: [
+            "Фен",
+            "тёплые полы",
+            "стиральная машина",
+            "зеркало с подсветкой",
+        ],
     },
     {
         title: "Сауна",
@@ -63,37 +65,37 @@ export const amenitiesData = [
 
 export const extraAmenitiesData = [
     {
-        path: "Yoki_Hutor/2024-05-15%2011-46-47%20(5)_mwQmtIni6.jpeg?",
+        path: "YokiHutor/website/sauna.jpeg",
         alt: "Yoki Hutor",
         title: "Различные виды освещения",
         icon: Sun,
     },
     {
-        path: "Yoki_Hutor/2024-05-10%2019-40-22%20(1)_8Hg2T6sgX.jpeg?",
+        path: "YokiHutor/website/bedroom.jpeg",
         alt: "Yoki Hutor",
         title: "Качественное бельё",
         icon: BedDouble,
     },
     {
-        path: "Yoki_Hutor/2024-05-10%2012-41-17%20(36)_prsir9rma.jpeg?",
+        path: "YokiHutor/website/shower.jpeg",
         alt: "Yoki Hutor",
         title: "Банные аксессуары",
         icon: ShowerHead,
     },
     {
-        path: "Yoki_Hutor/2024-05-15%2011-46-47_SBQzIm0cF.jpeg?",
+        path: "YokiHutor/website/sofa_close.jpeg",
         alt: "Yoki Hutor",
         title: "Гостевые принадлежности",
         icon: Heart,
     },
     {
-        path: "Yoki_Hutor/2024-05-20%2020-02-16%20(2)_Pdb6JWkRi.jpeg?",
+        path: "YokiHutor/website/outside.jpeg",
         alt: "Yoki Hutor",
         title: "Парковочное место",
         icon: CarFront,
     },
     {
-        path: "Yoki_Hutor/2024-05-10%2012-41-17%20(21)_8rydslyaW.jpeg?",
+        path: "YokiHutor/website/kitchen_close.jpeg",
         alt: "Yoki Hutor",
         title: "Вся необходимая посуда",
         icon: ChefHat,
@@ -114,45 +116,67 @@ export const attractionsData = [
         to: "https://dolinavodopadov.ru/",
     },
     {
+        title: "Ферма Осликов",
+        description:
+            "Находится в 1 км от нашего дома, можно погладить и покормить осликов",
+        to: "https://yandex.ru/maps/org/ferma_oslikov/3261459120/?ll=30.313761%2C61.509964&z=9",
+    },
+    {
+        title: "Этнопарк «Земля первых»",
+        description:
+            "это место, где можно узнать о быте и культуре саамского народа, а также покормить северных оленей и козлят в контактном зоопарке. Находится в 5 км. от нас",
+        to: "https://dzen.ru/a/ZLLn1KmeMwKmof9X",
+    },
+    {
         title: "Рускеала и рускеальские водопады",
         description:
-            "Всего в 50 км от нас вы найдёте этот природный шедевр, который поразит вас своими величественными видами",
+            "В 80 км от нас вы найдёте этот природный шедевр, который поразит вас своими величественными видами",
         to: "https://ruskeala.ru/",
+    },
+    {
+        title: "Кирха (п. Лумиваара)",
+        description:
+            "лютеранский храм 1935 года постройки, расположенный на вершине горы Рокка-Пата",
+        to: "https://yandex.ru/maps/org/kirkha/100106361259/?ll=30.313761%2C61.509964&z=9",
     },
 ];
 
 export const images = [
     {
-        original: "Yoki_Hutor/2024-05-20%2020-02-16_4Jmne73NP.jpeg?",
-        thumbnail: "Yoki_Hutor/2024-05-20%2020-02-16_4Jmne73NP.jpeg?",
+        original: "YokiHutor/website/lake.jpeg",
+        thumbnail: "YokiHutor/website/lake.jpeg",
     },
     {
-        original: "Yoki_Hutor/2024-05-10%2012-41-17%20(53)_K6AKFKZ63.jpeg?",
-        thumbnail: "Yoki_Hutor/2024-05-10%2012-41-17%20(53)_K6AKFKZ63.jpeg?",
+        original: "YokiHutor/website/kitchen.jpeg",
+        thumbnail: "YokiHutor/website/kitchen.jpeg",
     },
     {
-        original: "Yoki_Hutor/2024-05-10%2012-41-17%20(24)_RE4-0RTRm.jpeg?",
-        thumbnail: "Yoki_Hutor/2024-05-10%2012-41-17%20(24)_RE4-0RTRm.jpeg?",
+        original: "YokiHutor/website/sofa.jpeg",
+        thumbnail: "YokiHutor/website/sofa.jpeg",
     },
     {
-        original: "Yoki_Hutor/2024-05-10%2012-41-17%20(10)_TspkIPLXc.jpeg?",
-        thumbnail: "Yoki_Hutor/2024-05-10%2012-41-17%20(10)_TspkIPLXc.jpeg?",
+        original: "YokiHutor/website/sauna.jpeg",
+        thumbnail: "YokiHutor/website/sauna.jpeg",
     },
     {
-        original: "Yoki_Hutor/2024-05-15%2011-46-47%20(1)_I7BOaTNNk.jpeg?",
-        thumbnail: "Yoki_Hutor/2024-05-15%2011-46-47%20(1)_I7BOaTNNk.jpeg?",
+        original: "YokiHutor/website/toilet.jpeg",
+        thumbnail: "YokiHutor/website/toilet.jpeg",
     },
     {
-        original: "Yoki_Hutor/2024-05-20%2020-02-16%20(3)_GvzKbR3sR.jpeg?",
-        thumbnail: "Yoki_Hutor/2024-05-20%2020-02-16%20(3)_GvzKbR3sR.jpeg?",
+        original: "YokiHutor/website/bedroom_second.jpeg",
+        thumbnail: "YokiHutor/website/bedroom_second.jpeg",
     },
     {
-        original: "Yoki_Hutor/2024-05-10%2019-40-22%20(1)_8Hg2T6sgX.jpeg?",
-        thumbnail: "Yoki_Hutor/2024-05-10%2019-40-22%20(1)_8Hg2T6sgX.jpeg?",
+        original: "YokiHutor/website/table.jpeg",
+        thumbnail: "YokiHutor/website/table.jpeg",
     },
     {
-        original: "Yoki_Hutor/2024-05-20%2020-02-16%20(4)_R0chzFZe1.jpeg?",
-        thumbnail: "Yoki_Hutor/2024-05-20%2020-02-16%20(4)_R0chzFZe1.jpeg?",
+        original: "YokiHutor/website/shower.jpeg",
+        thumbnail: "YokiHutor/website/shower.jpeg",
+    },
+    {
+        original: "YokiHutor/website/back_yard.jpeg",
+        thumbnail: "YokiHutor/website/back_yard.jpeg",
     },
 ];
 

@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import { m } from "framer-motion";
 import Hamburger from "hamburger-react";
+import { IKImage } from "imagekitio-react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 
@@ -27,7 +28,16 @@ export const Header = () => {
         <div className="flex justify-between items-center">
             <div className="w-16 h-16 relative z-40">
                 <Link to={paths.home}>
-                    <img alt="" src="/logo/YOKI_LOGO_3_TRANSPARENT.png" />
+                    <IKImage
+                        alt="Йоки Хутор - логотип"
+                        path="YokiHutor/logo/YOKI_LOGO_3_TRANSPARENT.png"
+                        transformation={[
+                            {
+                                height: "64",
+                                width: "64",
+                            },
+                        ]}
+                    />
                 </Link>
             </div>
             {isOpen ? (

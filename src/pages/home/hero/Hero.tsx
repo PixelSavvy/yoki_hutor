@@ -42,7 +42,7 @@ export const Hero = () => {
                         />
 
                         <div className="absolute inset-0 w-full h-full bg-black opacity-60" />
-                        <Release className="absolute inset-y-[40%] w-full container max-w-lg md:inset-y-[30%] lg:max-w-3xl xl:max-w-4xl">
+                        <Release className="absolute inset-y-[40%] w-full container max-w-lg md:inset-y-[30%] lg:max-w-5xl">
                             <figure>
                                 <figcaption>
                                     <h1 className="">{item.title}</h1>
